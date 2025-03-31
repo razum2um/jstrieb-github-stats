@@ -114,9 +114,6 @@ async def main() -> None:
     excluded_langs = (
         {x.strip() for x in excluded_langs.split(",")} if excluded_langs else None
     )
-    print("excluded_langs from env:")
-    print(excluded_langs)
-    excluded_langs = 'HTML,CSS,Lua,Gherkin,JavaScript,SCSS,Shell,HCL,XSLT,Dockerfile,CoffeeScript,ANTLR,Makefile,Starlark,Objective-C,Ragel in Ruby Host,Emacs Lisp'.split(',')
     # Convert a truthy value to a Boolean
     raw_ignore_forked_repos = os.getenv("EXCLUDE_FORKED_REPOS")
     ignore_forked_repos = (

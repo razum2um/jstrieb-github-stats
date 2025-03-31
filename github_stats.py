@@ -351,17 +351,11 @@ Languages:
                     name = lang.get("node", {}).get("name", "Other")
                     languages = await self.languages
                     if name.lower() in exclude_langs_lower:
-                        print("excluding:")
-                        print(name.lower())
                         continue
                     if name in languages:
-                        print("in:")
-                        print(name.lower())
                         languages[name]["size"] += lang.get("size", 0)
                         languages[name]["occurrences"] += 1
                     else:
-                        print("else:")
-                        print(name.lower())
                         languages[name] = {
                             "size": lang.get("size", 0),
                             "occurrences": 1,
