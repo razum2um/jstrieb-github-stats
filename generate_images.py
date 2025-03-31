@@ -120,6 +120,8 @@ async def main() -> None:
         not not raw_ignore_forked_repos
         and raw_ignore_forked_repos.strip().lower() != "false"
     )
+    print("exclude_langs:")
+    print(exclude_langs)
     async with aiohttp.ClientSession() as session:
         s = Stats(
             user,
